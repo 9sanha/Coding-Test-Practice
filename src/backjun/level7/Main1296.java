@@ -33,7 +33,7 @@ public class Main1296 {
             temp = entry.getValue();
             if (max < temp) {
                 val = entry.getKey();
-                max = entry.getValue();
+                max = temp;
             } else if (max == temp) {
                 if (entry.getKey().compareTo(val) < 0) {
                     val = entry.getKey();
@@ -41,8 +41,6 @@ public class Main1296 {
             }
         }
         System.out.println(val);
-
-
     }
 
     private static int nameCount(String alph, String names) {
