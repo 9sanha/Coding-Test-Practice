@@ -54,36 +54,13 @@ public class Main1021 {
                             queue.removeFirst();
                         }
                         //원소의 위치가 리스트 길이의 절반보다 뒤에 있을 때
-                    } else if(queue.size() / 2 <= qIndex){
+                    } else {
                         for (int i = 0; i < queue.size() - qIndex; i++) {
                             count++;
                             queue.addFirst(queue.peekLast());
                             queue.removeLast();
                         }
                         //원소가 정가운데에 있을 때
-                    }else {
-                        // 찾아야하는 다음 원소가 있고 그 원소가 절반보다 앞에 있을 때
-                        if (qPoint+1 < numArr.length){
-                            if (queue.size()+1>=queue.indexOf(numArr[qPoint+1])){
-                                for (int i = 0; i < qIndex; i++) {
-                                    count++;
-                                    queue.addLast(queue.peekFirst());
-                                    queue.removeFirst();
-                                }
-                            }else {
-                                for (int i = 0; i < queue.size() - qIndex; i++) {
-                                    count++;
-                                    queue.addFirst(queue.peekLast());
-                                    queue.removeLast();
-                                }
-                            }
-                        }else {
-                            for (int i = 0; i < queue.size() - qIndex; i++) {
-                                count++;
-                                queue.addFirst(queue.peekLast());
-                                queue.removeLast();
-                            }
-                        }
                     }
                 }
 
