@@ -10,15 +10,16 @@ public class Main1021 {
         int n = sc.nextInt();
         int m = sc.nextInt();
         int[] numArr = new int[m];
-        for (int i = 0; i < m; i++) {
-            numArr[i] = sc.nextInt();
-        }
-
         int num;
         LinkedList<Integer> queue = createQueue(n);
         int count = 0;
         int qPoint = 0;
         int qIndex;
+        for (int i = 0; i < m; i++) {
+            numArr[i] = sc.nextInt();
+        }
+
+
         while (qPoint < numArr.length) {
             num = numArr[qPoint];
             qIndex = queue.indexOf(num);
