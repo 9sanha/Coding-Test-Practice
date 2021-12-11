@@ -8,16 +8,16 @@ public class Main1436 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int result = 0;
+        int count = 0;
         int num = 666;
-        String res="";
-        while (result!=n){
+        String result="";
+        while (count!=n){
             if (Integer.toString(num).contains("666")){
-                result++;
-                res = Integer.toString(num);
+                count++;
+                result = Integer.toString(num);
             }
             num++;
         }
-        System.out.println(res);
+        System.out.println(result);
     }
 }
